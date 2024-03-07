@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  client:
+    build:
+      context: ./heritage_ui
+    ports:
+      - "80:80"
+    networks:
+      - heritage-network
+
+  server:
+    build:
+      context: ./api
+    ports:
+      - "5000:5000"
+    networks:
+      - heritage-network
+    depends_on:
+      - heritage_ui
+
+networks:
+  heritage-network:
+    driver: bridge
