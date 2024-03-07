@@ -13,7 +13,7 @@ const Curd_prophit = () => {
       setFormValues(values);
 
       const response = await fetch(
-        "http://api/api/predict_sales_quantity",
+        "http://13.239.137.7/api/predict_sales_quantity",
         {
           method: "POST",
           mode: "cors",

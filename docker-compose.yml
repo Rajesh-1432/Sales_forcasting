@@ -12,6 +12,8 @@ services:
       context: ./api
     networks:
       - heritage-network
+    depends_on:
+      - heritage_ui
 
   nginx:
     image: nginx:latest
