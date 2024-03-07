@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  client:
+  heritage_ui:
     build:
       context: ./heritage_ui
     ports:
@@ -8,7 +8,7 @@ services:
     networks:
       - heritage-network
 
-  server:
+  api:
     build:
       context: ./api
     ports:
