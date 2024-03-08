@@ -19,4 +19,4 @@ def predict_sales_quantity():
     return jsonify({'sales_quantity': sales_quantity})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
